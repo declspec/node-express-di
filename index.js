@@ -4,7 +4,7 @@ var di  = require("node-di"),
     nei = require("./lib/core")(di); 
 
 var DEFAULT_CONFIGURATION = {
-    strictDi
+    strictDi: true
 };
 
 module.exports = {
