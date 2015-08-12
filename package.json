@@ -15,7 +15,6 @@
   "author": "Jason Larke",
   "license": "GPL",
   "dependencies": {
-    "express": "^4.13.3",
     "node-di": "https://github.com/declspec/node-di/archive/master.tar.gz"
   }
 }
