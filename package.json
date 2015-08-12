@@ -1,0 +1,21 @@
+{
+  "name": "node-express-di",
+  "version": "1.0.0",
+  "description": "Node Dependency Injection express wrapper",
+  "keywords": [
+    "node",
+    "dependency",
+    "injection",
+    "express"
+  ],
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jason Larke",
+  "license": "GPL",
+  "dependencies": {
+    "express": "^4.13.3",
+    "node-di": "https://github.com/declspec/node-di/archive/master.tar.gz"
+  }
+}
