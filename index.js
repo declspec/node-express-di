@@ -25,10 +25,17 @@ module.exports = {
             $provide.value("$express", express);
         }]);
         
-        // force load the core modules
+        // force load the core modules first
         modules.unshift("nei");
+
+        // create the injector
+        var injector = di.injector(modules, config.strictDi);
         
-        // create and return the injector
-        return di.injector(modules, config.strictDi);
+        // add a custom module to hook into express's middleware
+        injector.invoke([ "$injector", "$route", function($injector, $route) {
+            $injector.invoke($route.$$resolve);
+        }]);
+        
+        return injector;
     }
 };
