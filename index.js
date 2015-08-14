@@ -7,7 +7,7 @@ var DEFAULT_CONFIGURATION = {
 };
 
 // Register the core components
-require("./lib/edi/core")(di);
+require("./lib/core")(di.module);
 
 module.exports = {
     module:	    di.module,
@@ -28,16 +28,13 @@ module.exports = {
         }]);
         
         // force load the core modules first
-        modules.unshift("edi");
+        modules.unshift("di");
 
         // create the injector
-        var injector = di.injector(modules, config.strictDi);
+        var injector = express.injector = di.injector(modules, config.strictDi);
         
         // add an injected hook into express's middleware
         injector.invoke(injector.get("$route").$$resolve);
-        //injector.invoke([ "$injector", "$route", function($injector, $route) {
-        //    $injector.invoke($route.$$resolve);
-        //}]);
         
         return injector;
     }
