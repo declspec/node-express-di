@@ -1,6 +1,6 @@
 "use strict";
 
-var di  = require("node-di");
+var di  = require("node-dpi");
 
 var DEFAULT_CONFIGURATION = {
     strictDi: true
