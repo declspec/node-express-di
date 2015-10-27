@@ -2,10 +2,6 @@
 
 var di  = require("node-dpi");
 
-var DEFAULT_CONFIGURATION = {
-    strictDi: true
-};
-
 // Register the core components
 require("./lib/core")(di.module);
 
