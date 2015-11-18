@@ -1,6 +1,6 @@
 {
   "name": "node-express-dpi",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Node Dependency Injection express wrapper",
   "repository": "https://github.com/declspec/node-express-dpi",
   "keywords": [
@@ -16,6 +16,6 @@
   "author": "Jason Larke",
   "license": "MIT",
   "dependencies": {
-    "node-dpi": "0.0.3"
+    "node-dpi": "0.0.4"
   }
 }
