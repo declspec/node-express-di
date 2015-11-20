@@ -1,6 +1,6 @@
 {
   "name": "node-express-dpi",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Node Dependency Injection express wrapper",
   "repository": "https://github.com/declspec/node-express-dpi",
   "keywords": [
