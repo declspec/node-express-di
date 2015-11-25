@@ -1,6 +1,6 @@
 {
   "name": "node-express-dpi",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Node Dependency Injection express wrapper",
   "repository": {
     "type": "git",
