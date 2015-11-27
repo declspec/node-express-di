@@ -20,7 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "^3.10.1",
-    "node-dpi": "0.0.6",
+    "node-dpi": "0.0.8",
     "core-util-is": "~1.0.2"
   }
 }
