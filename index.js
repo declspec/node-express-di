@@ -3,7 +3,7 @@
 var di  = require("node-dpi");
 
 // Register the core components
-require("./lib/core")(di.module);
+require("./lib/core")(di);
 
 module.exports = {
     module:	    di.module,
@@ -20,18 +20,15 @@ module.exports = {
         
         // Create a 'value' provider for the express component so we can inject it into other services
         modules.unshift(["$provide", function($provide) {
-            $provide.value("$express", express);
+            $provide.constant("$express", express);
         }]);
         
         // force load the core modules first
         modules.unshift("di");
-
-        // create the injector
+        
         var injector = express.injector = di.injector(modules, config.strictDi);
-        
-        // add an injected hook into express's middleware
-        injector.invoke(injector.get("$route").$$resolve);
-        
+        injector.get("$route").resolve();
+
         return injector;
     }
 };
